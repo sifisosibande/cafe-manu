@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <style>
+        img {
+            height: 220px;
+            width: 220px;
+        }
+        #myinfo {
+            background-image: url("./imagesmount.jpg.crdownload");
+            background-size: cover; /* Adjust as needed */
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Adjust as needed */
+
+
+
+        }
+        body {
+            background-color: lightcyan;
+        }
+        #background-heading {
+            background-image: url('./download2.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            color: #080808;
+        }
+        #background-heading2 {
+            background-image: url('./download\ \(1\).jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            color: #080808;
+        }
+        #background-heading3 {
+            background-image: url('./images\ \(1\).jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            color: #141313;
+        }
+    </style>
+</head>
+<body> 
+    <section id="myinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md" style="padding: 5em;">
+                    <h1>{{user.fullName}}</h1>
+
+                </div>
+                <div class="col img">
+                    <img src="./images.jpg" class="img">
+                </div>
+
+            </div>
+            
+        </div>
+        
+    </section>
+    <section>
+
+            <h2 id="background-heading3">{{city.name}}</h2>
+            <div class ="row">
+                <div class="col-md">
+                    <img src="./download.jpg" alt="image of Tokyo.">
+
+
+
+                </div>
+
+                    <div class= "col img">
+
+
+
+                </div>
+
+                <div class="decribtion">
+                    <p>{{city.description}}</p>
+
+                </div>
+            </div>
+        
+
+
+        </div>
+
+        </div>
+    </section>
+    <section>
+
+            <div class="row">
+                <div class="col-md">
+                    <h2 id="background-heading2">{{foreignLanguage.language}}</h2>
+
+                </div>
+                <div class="foreignLanguage">
+                    <table class="table table-white table-striped">
+                        <tr>
+                            <thead><th>English</th><th>French</th></thead>
+                        </tr>
+                        {{#each foreignLanguage.phrases}}
+                        <tr>
+                            <td>{{englishPhrase}}</td>
+                            <td>{{foreignLanguage}}</td>
+
+                        </tr>
+                        {{/each}}
+                    </table>
+                </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section>
+
+            <h2 id="background-heading">Favourite subjects</h2>
+            <h4>Bachelor of Engineering Technology in Industrial Engineering at the university of Johannesburg. </h4>
+            <div class="row" style="background-color: aliceblue;">
+                {{#each favouriteSubjects}}
+                
+                <div class="col s2" style="padding: 3em;">
+                    {{name}}
+                    </div>
+                    <div class="col s2">
+
+
+                        <img src={{description}}>
+                        </div>
+                        {{/each}}
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+
+</body>
+</html>
